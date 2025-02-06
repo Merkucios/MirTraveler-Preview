@@ -4,7 +4,6 @@ import { SearchCityInput } from './SearchCityInput';
 import { DateValue, SearchDateInput } from './SearchDateInput';
 import { SearchGuestsInput } from './SearchGuestsInput';
 import { SearchIcon } from '@/components/shared/icons';
-import { Button } from '@/components/shared';
 
 interface SearchWidgetProps {
   className?: string;
@@ -53,7 +52,7 @@ export const SearchWidget: React.FC<SearchWidgetProps> = ({
   return (
     <div
       ref={dropdownRef}
-      className={`relative flex h-14 w-full items-center rounded-full px-4 sm:px-6 ${className}`}
+      className={`relative flex w-full items-center rounded-full shadow-md sm:h-14 ${className}`}
     >
       {gradientMask && (
         <div
@@ -61,37 +60,43 @@ export const SearchWidget: React.FC<SearchWidgetProps> = ({
         ></div>
       )}
 
-      <div className="absolute inset-y-0 left-1/3 z-10 w-px bg-gray-300"></div>
-      <div className="absolute inset-y-0 left-2/3 z-10 w-px bg-gray-300"></div>
+      {/* Город */}
+      <div className="relative flex-1 px-4 sm:px-6">
+        <SearchCityInput
+          selectedCity={selectedCity}
+          setSelectedCity={setSelectedCity}
+          dropdown={dropdown}
+          toggleDropdown={toggleDropdown}
+        />
+        <div className="absolute right-0 top-1/2 h-5 w-px -translate-y-1/2 bg-gray-300"></div>
+      </div>
 
-      <SearchCityInput
-        selectedCity={selectedCity}
-        setSelectedCity={setSelectedCity}
-        dropdown={dropdown}
-        toggleDropdown={toggleDropdown}
-      />
+      {/* Даты */}
+      <div className="relative flex-1 px-4 sm:px-6">
+        <SearchDateInput
+          dateRange={dateRange}
+          setDateRange={setDateRange}
+          dropdown={dropdown}
+          toggleDropdown={toggleDropdown}
+        />
+        <div className="absolute right-0 top-1/2 h-5 w-px -translate-y-1/2 bg-gray-300"></div>
+      </div>
 
-      <SearchDateInput
-        dateRange={dateRange}
-        setDateRange={setDateRange}
-        dropdown={dropdown}
-        toggleDropdown={toggleDropdown}
-      />
+      {/* Гости */}
+      <div className="relative flex-1 px-4 sm:px-6">
+        <SearchGuestsInput
+          guests={guests}
+          setGuests={setGuests}
+          dropdown={dropdown}
+          toggleDropdown={toggleDropdown}
+        />
+        <div className="absolute right-0 top-1/2 h-5 w-px -translate-y-1/2 bg-gray-300"></div>
+      </div>
 
-      <SearchGuestsInput
-        guests={guests}
-        setGuests={setGuests}
-        dropdown={dropdown}
-        toggleDropdown={toggleDropdown}
-      />
-
-      <Button
-        circle
-        className="hover:bg-blue-tur-dark items-center justify-center bg-blue-tur stroke-white"
-        onClick={() => console.log('Search triggered')}
-      >
+      {/* Кнопка поиска */}
+      <div className="relative flex items-center justify-center px-4 sm:px-6">
         <SearchIcon className="h-6 w-6 stroke-white" />
-      </Button>
+      </div>
     </div>
   );
 };
