@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { paths } from '@/components/app/paths';
 
 export const HeaderTop: React.FC = () => (
-  <div className="flex flex-wrap items-center justify-between space-y-2 sm:space-y-0">
+  <div className="relative flex flex-wrap items-center justify-between space-y-2 border-b border-medium-grey-tur pb-2 sm:space-y-0">
     <nav className="w-full sm:w-auto">
       <ul className="flex flex-wrap justify-center space-x-4 text-xs text-medium-grey-tur sm:space-x-8 sm:text-sm md:space-x-16 lg:text-sm">
         <Link href={paths.contact}>
