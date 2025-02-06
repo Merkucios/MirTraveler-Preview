@@ -26,7 +26,7 @@ export const PopularToursExcurcionsWidget = () => {
           },
           1024: {
             slidesPerView: 4,
-            spaceBetween: 150,
+            spaceBetween: 10,
           },
         }}
       >
