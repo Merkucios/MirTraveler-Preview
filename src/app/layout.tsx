@@ -6,7 +6,7 @@ import { PopupAuthManager } from '@/components/widgets/auth';
 
 export const metadata: Metadata = {
   title: 'Mir Traveler',
-  description: 'Nothing',
+  description: 'Mir Traveler - открывайте мир вместе с нами 🗺️ ',
 };
 
 export default function RootLayout({
