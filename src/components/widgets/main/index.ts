@@ -1,0 +1,9 @@
+export { EmailDistributionWidget } from './EmailDistributionWidget';
+export { NavigationCardsWidget } from './NavigationCardsWidget';
+export { HotJourneysWidget } from './HotJourneysWidget';
+export { PopularEntertainmentWidget } from './PopularEntertainmentWidget';
+export { PopularRentalHousingWidget } from './PopularRentalHousingWidget';
+export { PopularRentalCarWidget } from './PopularRentalCarWidget';
+export { PopularToursExcurcionsWidget } from './PopularToursExcurcionsWidget';
+export { PushkinBannerWidget } from './PushkinBannerWidget';
+export { MainBannerWithSearch } from './MainBannerWithSearch';

@@ -1,0 +1,1 @@
+export { RegistrationPopupWidget } from './RegistrationPopupWidget';

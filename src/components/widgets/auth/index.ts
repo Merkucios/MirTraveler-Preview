@@ -1,0 +1,1 @@
+export { PopupAuthManager } from './PopupAuthManager';

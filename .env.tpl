@@ -1,0 +1,9 @@
+BACKEND_SERVER_URL="http://localhost:8000/"
+
+NEXTAUTH_URL="http://localhost:3000"
+NEXTAUTH_SECRET="openssl rand -base64 32"
+
+VK_CLIENT_ID=""
+VK_CLIENT_SECRET=""
+YANDEX_CLIENT_ID=""
+YANDEX_CLIENT_SECRET=""

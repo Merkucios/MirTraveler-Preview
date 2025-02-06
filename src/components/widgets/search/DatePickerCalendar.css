@@ -1,0 +1,97 @@
+/* Контейнер календаря */
+.react-calendar {
+  border: none;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Навигация */
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Кнопки навигации */
+.react-calendar__navigation__arrow {
+  background: none;
+  border: none;
+  color: #374151;
+  font-weight: 500;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.react-calendar__navigation__arrow:hover {
+  color: #10b981;
+}
+
+/* Дни недели */
+.react-calendar__month-view__weekdays {
+  display: flex;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: 500;
+  justify-content: space-between;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #353535;
+}
+
+/* Суббота и Воскресенье */
+.react-calendar__month-view__weekdays__weekday--weekend {
+  color: #5dd241; /* Зеленый цвет для субботы и воскресенья */
+}
+
+/* Ячейки дней */
+.react-calendar__tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Активная ячейка */
+.react-calendar__tile--active {
+  background-color: #5dd241;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  width: 32px;
+  height: 32px;
+}
+
+/* Наведение на ячейку */
+.react-calendar__tile:hover {
+  background-color: rgba(142, 142, 142, 0.5); /* Светло-серое затемнение */
+  border-radius: 50%;
+}
+
+/* Текущий день */
+.react-calendar__tile--now {
+  background-color: #e5f3eb;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* Диапазон выбранных дней */
+.react-calendar__tile--range {
+  background-color: #5dd241;
+  color: white;
+  border-radius: 50%;
+  font-weight: 600;
+}

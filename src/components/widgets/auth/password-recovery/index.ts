@@ -1,0 +1,1 @@
+export { PasswordRecoveryPopupWidget } from './PasswordRecoveryPopupWidget';
