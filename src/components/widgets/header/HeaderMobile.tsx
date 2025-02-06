@@ -36,9 +36,9 @@ export const HeaderMobile: React.FC = () => {
           className="text-xl text-medium-grey-tur"
         >
           {isMenuOpen ? (
-            <CloseMark className="stroke-white" />
+            <CloseMark className="stroke-black" />
           ) : (
-            <MenuBurger className="stroke-white" />
+            <MenuBurger className="stroke-black" />
           )}
         </button>
       </div>
