@@ -46,6 +46,7 @@ export {
 
 export {
   HoopIcon,
+  GlobeGraphicIcon,
   DiskIcon,
   PyramidIcon,
   SphereIcon,

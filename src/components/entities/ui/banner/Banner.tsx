@@ -41,7 +41,7 @@ export const Banner: React.FC<BannerProps> = ({
       <div className="absolute bottom-12 left-6 flex flex-col gap-4 text-left sm:bottom-16 sm:left-12 md:bottom-20 md:left-16 lg:bottom-24 lg:left-20">
         {children && <div className="mb-4 w-[full]">{children}</div>}
 
-        <h1 className="text-3xl font-semibold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
+        <h1 className="text-3xl font-semibold leading-tight text-white sm:text-2xl md:text-3xl lg:text-4xl">
           {title}
         </h1>
 

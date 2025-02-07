@@ -1,7 +1,7 @@
 'use client';
 import { Banner } from '@/components/entities/ui/banner/Banner';
 import { Carousel } from '@/components/shared';
-import { SearchWidget } from '../search';
+import { SearchWidget } from '../../search';
 
 export const MainBannerWithSearch = () => {
   return (

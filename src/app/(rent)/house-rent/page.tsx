@@ -1,15 +1,16 @@
 'use client';
-import { PreviewCard } from '@/components/entities';
+import { HouseRentPreviewCard } from '@/components/entities';
 import { exampleMarkers } from '@/components/entities/model/map';
 import { Banner } from '@/components/entities/ui/banner/Banner';
 import { LazyMap } from '@/components/entities/ui/map';
 import { Carousel, PageWrapper } from '@/components/shared';
 import { FilterRentHouse } from '@/components/widgets/filter';
+import { HouseRentNavigationGrid } from '@/components/widgets/navigation-cards/navigation-section';
 import { SearchWidget } from '@/components/widgets/search';
 
 export default function HouseRentPage() {
   return (
-    <>
+    <div className="mb-10">
       <Carousel
         enableNavigation={false}
         enablePagination={true}
@@ -20,7 +21,7 @@ export default function HouseRentPage() {
         uniqueId={'MainBannerWithSearch'}
       >
         <Banner
-          imageSrc="/house-rent/banner.jpg"
+          imageSrc="/rent/house-rent/banner.jpg"
           title="Апартаменты на Воздвиженской"
           subtitle="Жильё класса премиум в жилом комплексе с охраняемым паркингом"
           gradientMask="bg-gradient-to-b from-[#0e67a1]/5 to-[#00678d]/35 to-transparent"
@@ -39,7 +40,7 @@ export default function HouseRentPage() {
         </Banner>
 
         <Banner
-          imageSrc="/house-rent/banner.jpg"
+          imageSrc="/rent/house-rent/banner.jpg"
           title="Апартаменты на Воздвиженской"
           subtitle="Жильё класса премиум в жилом комплексе с охраняемым паркингом"
           gradientMask="bg-gradient-to-b from-[#0e67a1]/5 to-[#00678d]/35 to-transparent"
@@ -57,7 +58,7 @@ export default function HouseRentPage() {
           />
         </Banner>
         <Banner
-          imageSrc="/house-rent/banner.jpg"
+          imageSrc="/rent/house-rent/banner.jpg"
           title="Апартаменты на Воздвиженской"
           subtitle="Жильё класса премиум в жилом комплексе с охраняемым паркингом"
           gradientMask="bg-gradient-to-b from-[#0e67a1]/5 to-[#00678d]/35 to-transparent"
@@ -75,7 +76,7 @@ export default function HouseRentPage() {
           />
         </Banner>
         <Banner
-          imageSrc="/house-rent/banner.jpg"
+          imageSrc="/rent/house-rent/banner.jpg"
           title="Апартаменты на Воздвиженской"
           subtitle="Жильё класса премиум в жилом комплексе с охраняемым паркингом"
           gradientMask="bg-gradient-to-b from-[#0e67a1]/5 to-[#00678d]/35 to-transparent"
@@ -93,7 +94,7 @@ export default function HouseRentPage() {
           />
         </Banner>
         <Banner
-          imageSrc="/house-rent/banner.jpg"
+          imageSrc="/rent/house-rent/banner.jpg"
           title="Апартаменты на Воздвиженской"
           subtitle="Жильё класса премиум в жилом комплексе с охраняемым паркингом"
           gradientMask="bg-gradient-to-b from-[#0e67a1]/5 to-[#00678d]/35 to-transparent"
@@ -115,8 +116,8 @@ export default function HouseRentPage() {
         <div className="my-8 flex gap-6">
           <FilterRentHouse />
           <div className="flex flex-col gap-4">
-            <PreviewCard
-              imageUrl={'/house-rent/card-preview/housePreview.png'}
+            <HouseRentPreviewCard
+              imageUrl={'/rent/house-rent/card-preview/housePreview.png'}
               title={'Апартаменты на Смоленской'}
               price={1400}
               pricePerTwoDays={'2800'}
@@ -126,8 +127,8 @@ export default function HouseRentPage() {
               beds={'4 спальных места'}
               rating={4.3}
             />
-            <PreviewCard
-              imageUrl={'/house-rent/card-preview/housePreview.png'}
+            <HouseRentPreviewCard
+              imageUrl={'/rent/house-rent/card-preview/housePreview.png'}
               title={'Апартаменты на Смоленской'}
               price={1400}
               pricePerTwoDays={'2800'}
@@ -137,8 +138,8 @@ export default function HouseRentPage() {
               beds={'4 спальных места'}
               rating={4.3}
             />
-            <PreviewCard
-              imageUrl={'/house-rent/card-preview/housePreview.png'}
+            <HouseRentPreviewCard
+              imageUrl={'/rent/house-rent/card-preview/housePreview.png'}
               title={'Апартаменты на Смоленской'}
               price={1400}
               pricePerTwoDays={'2800'}
@@ -148,8 +149,8 @@ export default function HouseRentPage() {
               beds={'4 спальных места'}
               rating={4.3}
             />
-            <PreviewCard
-              imageUrl={'/house-rent/card-preview/housePreview.png'}
+            <HouseRentPreviewCard
+              imageUrl={'/rent/house-rent/card-preview/housePreview.png'}
               title={'Апартаменты на Смоленской'}
               price={1400}
               pricePerTwoDays={'2800'}
@@ -159,8 +160,8 @@ export default function HouseRentPage() {
               beds={'4 спальных места'}
               rating={4.3}
             />
-            <PreviewCard
-              imageUrl={'/house-rent/card-preview/housePreview.png'}
+            <HouseRentPreviewCard
+              imageUrl={'/rent/house-rent/card-preview/housePreview.png'}
               title={'Апартаменты на Смоленской'}
               price={1400}
               pricePerTwoDays={'2800'}
@@ -170,8 +171,8 @@ export default function HouseRentPage() {
               beds={'4 спальных места'}
               rating={4.3}
             />
-            <PreviewCard
-              imageUrl={'/house-rent/card-preview/housePreview.png'}
+            <HouseRentPreviewCard
+              imageUrl={'/rent/house-rent/card-preview/housePreview.png'}
               title={'Апартаменты на Смоленской'}
               price={1400}
               pricePerTwoDays={'2800'}
@@ -186,7 +187,8 @@ export default function HouseRentPage() {
             <LazyMap markers={exampleMarkers} />
           </div>
         </div>
+        <HouseRentNavigationGrid />
       </PageWrapper>
-    </>
+    </div>
   );
 }

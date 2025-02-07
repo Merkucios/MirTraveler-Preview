@@ -9,47 +9,49 @@ import {
   HeartFilledIcon,
   PinCircleIcon,
 } from '@/components/shared/icons';
+import { PreviewCardBadge } from '@/components/shared';
 
-interface PreviewCardProps {
+interface CarRentPreviewCardProps {
   imageUrl: string;
   title: string;
   price: number;
-  pricePerTwoDays: string;
+  pricePerTwoDays: number;
   metro: string;
   distance: string;
-  area: string;
-  beds: string;
+  cityAndOdometer: string;
   rating: number;
+  badgeText?: string;
 }
 
-export const PreviewCard: React.FC<PreviewCardProps> = ({
+export const CarRentPreviewCard: React.FC<CarRentPreviewCardProps> = ({
   imageUrl,
   title,
   price,
   pricePerTwoDays,
   metro,
   distance,
-  area,
-  beds,
+  cityAndOdometer,
   rating,
+  badgeText,
 }) => {
   return (
     <div className="grid w-full max-w-xl grid-cols-1 overflow-hidden rounded-lg bg-light-grey-tur shadow-lg sm:grid-cols-[1fr_2fr]">
       <div className="relative h-48 w-full sm:h-auto sm:w-60">
-        <Image
-          className="h-full w-full object-cover"
-          src={imageUrl}
-          alt={title}
-          width={240}
-          height={192}
-        />
+        <Image className="object-cover" src={imageUrl} alt={title} fill />
 
-        <Button
-          circle
-          className="absolute left-2 top-2 h-10 w-10 bg-[#f3f3f3]/25 backdrop-blur-sm hover:bg-inherit sm:h-12 sm:w-12 lg:h-10 lg:w-10"
-        >
-          <HeartFilledIcon className="fill-white" />
-        </Button>
+        <div className="absolute left-2 right-2 top-2 flex justify-between">
+          {badgeText && (
+            <PreviewCardBadge className="bg-green-tur px-2 py-1 text-xs text-white hover:hover:bg-[#4caf37] sm:px-3 sm:py-1.5 sm:text-sm lg:px-4 lg:py-2 lg:text-sm">
+              {badgeText}
+            </PreviewCardBadge>
+          )}
+          <Button
+            circle
+            className="h-10 w-10 bg-[#f3f3f3]/25 backdrop-blur-sm hover:bg-inherit sm:h-12 sm:w-12 lg:h-10 lg:w-10"
+          >
+            <HeartFilledIcon className="fill-white" />
+          </Button>
+        </div>
       </div>
 
       <div className="flex flex-col justify-between p-4">
@@ -73,9 +75,7 @@ export const PreviewCard: React.FC<PreviewCardProps> = ({
           <p className="flex items-center gap-1">
             <PinCircleIcon className="stroke-[#8e8e8e]" /> {distance}
           </p>
-          <p>
-            {area} {beds}
-          </p>
+          <p className="text-wrap">{cityAndOdometer}</p>
         </div>
 
         <div className="flex items-center justify-between">

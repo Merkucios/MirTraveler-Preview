@@ -3,14 +3,14 @@ import { PageWrapper } from '@/components/shared';
 import {
   EmailDistributionWidget,
   HotJourneysWidget,
-  NavigationCardsWidget,
   PopularEntertainmentWidget,
   PopularRentalHousingWidget,
   PopularToursExcurcionsWidget,
 } from '@/components/widgets/main';
-import { MainBannerWithSearch } from '@/components/widgets/main/MainBannerWithSearch';
-import { PopularRentalCarWidget } from '@/components/widgets/main/PopularRentalCarWidget';
-import { PushkinBannerWidget } from '@/components/widgets/main/PushkinBannerWidget';
+import { MainBannerWithSearch } from '@/components/widgets/main/banners/MainBannerWithSearch';
+import { PopularRentalCarWidget } from '@/components/widgets/main/popular-carousel/PopularRentalCarWidget';
+import { AdBannerWidget } from '@/components/widgets/main/banners/AdBannerWidget';
+import { MainNavigationCardsWidget } from '@/components/widgets/navigation-cards';
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
       <PageWrapper>
         <div className="my-4 flex flex-col gap-3.5">
           <HotJourneysWidget />
-          <NavigationCardsWidget />
+          <MainNavigationCardsWidget />
         </div>
       </PageWrapper>
 
@@ -38,7 +38,13 @@ export default function Home() {
           <PopularEntertainmentWidget />
           <PopularToursExcurcionsWidget />
 
-          <PushkinBannerWidget />
+          <AdBannerWidget
+            title="Все предложения по Пушкинской карте здесь"
+            badgeText="Подписаться на рассылку"
+            imageSrc="/pushkin.png"
+            mobileImageSrc="/pushkinMobile.png"
+            bgColor="#5dd241"
+          />
         </div>
       </PageWrapper>
     </>

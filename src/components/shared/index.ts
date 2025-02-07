@@ -1,4 +1,5 @@
 export { Badge } from './badge/Badge';
+export { PreviewCardBadge } from './badge/PreviewCardBadge';
 export { Button } from './buttons/Button';
 export { Carousel } from './carousel/Carousel';
 export { Dropdown } from './drop-down/DropDown';

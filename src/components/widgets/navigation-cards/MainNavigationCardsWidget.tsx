@@ -1,3 +1,4 @@
+import { paths } from '@/components/app/paths';
 import { NavigationCard } from '@/components/entities/ui/card/NavigationCard';
 import { Badge } from '@/components/shared';
 import {
@@ -8,7 +9,7 @@ import {
   SphereIcon,
 } from '@/components/shared/icons';
 
-export const NavigationCardsWidget = () => {
+export const MainNavigationCardsWidget = () => {
   return (
     <div className="flex flex-col gap-3.5">
       <h1 className="text-3xl font-semibold leading-10 text-dark-grey-tur">
@@ -26,7 +27,7 @@ export const NavigationCardsWidget = () => {
               <DiskIcon className="h-32 w-32" />
             </NavigationCard.Icon>
             <NavigationCard.Title
-              href={'/'}
+              href={paths['house-rent']}
               className="mt-4 text-xl text-dark-grey-tur"
             >
               <div className="flex items-center text-xl font-medium leading-9">
@@ -53,7 +54,7 @@ export const NavigationCardsWidget = () => {
               <PyramidIcon className="h-32 w-32" />
             </NavigationCard.Icon>
             <NavigationCard.Title
-              href={'/'}
+              href={paths['car-rent']}
               className="mt-4 text-xl text-dark-grey-tur"
             >
               <div className="flex items-center text-xl font-medium leading-9">
@@ -69,21 +70,6 @@ export const NavigationCardsWidget = () => {
                 <Badge>Пятиместный минивэн</Badge>
               </div>
             </NavigationCard.Content>
-
-            {/* А что если поиграться не с Grid, а с Flex ❓*/}
-            {/* <NavigationCard.Content className="py-2.5">
-              <div className="flex flex-wrap justify-center gap-4">
-                <Badge className="max-w-full flex-wrap truncate">
-                  Мотоциклы
-                </Badge>
-                <Badge className="max-w-full flex-wrap truncate">
-                  Велосипеды
-                </Badge>
-                <Badge className="max-w-full flex-wrap truncate">
-                  Пятиместный минивэн
-                </Badge>
-              </div>
-            </NavigationCard.Content> */}
           </NavigationCard>
         </div>
 
@@ -93,7 +79,7 @@ export const NavigationCardsWidget = () => {
               <SphereIcon className="h-32 w-32" />
             </NavigationCard.Icon>
             <NavigationCard.Title
-              href={'/'}
+              href={paths['tours-excursions']}
               className="mt-4 text-xl text-dark-grey-tur"
             >
               <div className="flex items-center text-xl font-medium leading-9">
@@ -119,7 +105,7 @@ export const NavigationCardsWidget = () => {
               <HoopIcon className="h-32 w-32" />
             </NavigationCard.Icon>
             <NavigationCard.Title
-              href={'/'}
+              href={paths['leisure-entertainment']}
               className="mt-4 text-xl text-dark-grey-tur"
             >
               <div className="flex items-center text-xl font-medium leading-9">
